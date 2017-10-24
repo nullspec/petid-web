@@ -18,6 +18,7 @@ import { HomeComponent } from './home/index';
 import { PetDetailComponent } from './pet-detail/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
+import { DashboardComponent } from './dashboard/index';
 
 @NgModule({
     imports: [
@@ -32,7 +33,8 @@ import { RegisterComponent } from './register/index';
         HomeComponent,
         LoginComponent,
         RegisterComponent,
-        PetDetailComponent
+        PetDetailComponent,
+        DashboardComponent
     ],
     providers: [
         AuthGuard,

@@ -1,9 +1,31 @@
-﻿<!-- main app container -->
-<div class="jumbotron">
-    <div class="container">
-        <div class="col-sm-8 col-sm-offset-2">
-            <alert></alert>
-            <router-outlet></router-outlet>
+﻿<div class="site-wrapper">
+
+  <div class="site-wrapper-inner">
+
+    <div class="cover-container">
+
+      <div class="masthead clearfix">
+        <div class="inner">
+          <h3 class="masthead-brand">Cover</h3>
+          <nav>
+            <ul class="nav masthead-nav">
+              <li class="active"><a href="/">Home</a></li>
+              <li><a [routerLink]="" (click)="loginAction()">{{loginText}}</a></li>
+            </ul>
+          </nav>
         </div>
+      </div>
+
+      <router-outlet class="lead"></router-outlet>
+
+      <div class="mastfoot">
+        <div class="inner">
+          <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        </div>
+      </div>
+
     </div>
+
+  </div>
+
 </div>
