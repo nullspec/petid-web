@@ -19,6 +19,7 @@ import { PetDetailComponent } from './pet-detail/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 import { DashboardComponent } from './dashboard/index';
+import { ProfileComponent } from './profile/index';
 
 @NgModule({
     imports: [
@@ -34,7 +35,8 @@ import { DashboardComponent } from './dashboard/index';
         LoginComponent,
         RegisterComponent,
         PetDetailComponent,
-        DashboardComponent
+        DashboardComponent,
+        ProfileComponent
     ],
     providers: [
         AuthGuard,

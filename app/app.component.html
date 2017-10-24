@@ -1,31 +1,30 @@
-﻿<div class="site-wrapper">
-
+﻿<!-- <home-component class="home-component"></home-component> -->
+<div class="site-wrapper">
   <div class="site-wrapper-inner">
-
     <div class="cover-container">
-
       <div class="masthead clearfix">
         <div class="inner">
-          <h3 class="masthead-brand">Cover</h3>
+          <h3 class="masthead-brand">PetId</h3>
           <nav>
             <ul class="nav masthead-nav">
-              <li class="active"><a href="/">Home</a></li>
-              <li><a [routerLink]="" (click)="loginAction()">{{loginText}}</a></li>
+              <li><a href="/">Home</a></li>
+              <li>
+                <a [routerLink]="" (click)="loginAction()"> {{loginText}}</a>
+              </li>
+              <li><a href="#">About</a></li>
             </ul>
           </nav>
         </div>
       </div>
 
+      <home-component [hidden]="isHidden()" class="home-component"></home-component>
       <router-outlet class="lead"></router-outlet>
 
       <div class="mastfoot">
         <div class="inner">
-          <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+          &copy; {{copywrite}} Pet Identification System
         </div>
       </div>
-
     </div>
-
   </div>
-
 </div>

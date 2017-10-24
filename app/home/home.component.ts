@@ -2,6 +2,7 @@
 
 @Component({
     moduleId: module.id,
+    selector: 'home-component',
     templateUrl: 'home.component.html'
 })
 

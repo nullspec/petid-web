@@ -1,10 +1,9 @@
-﻿import { Component, onDestroy } from '@angular/core';
+﻿import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 
 import { AuthenticationService } from './_services/index';
-import { User } from '../_models/index';
-
 
 @Component({
     moduleId: module.id,
@@ -16,6 +15,7 @@ export class AppComponent implements OnInit {
   isLoggedIn: any;
   loggedInSubscription: Subscription;
   loginText: string = 'Login / Register';
+  copywrite: string = new Date().getFullYear();
 
   constructor(
     private authenticationService: AuthenticationService,
@@ -29,6 +29,7 @@ export class AppComponent implements OnInit {
           this.isLoggedIn = loggedIn;
           this.loginText = this.isLoggedIn ? 'Logout' : 'Login / Register';
       });
+    console.log(this.router.url);
   }
 
   ngOnDestroy() {
@@ -38,9 +39,14 @@ export class AppComponent implements OnInit {
   loginAction() {
     if (this.isLoggedIn) {
       this.authenticationService.logout();
-      this.router.navigate('/');
+      this.router.navigate(['/']);
     } else {
       this.router.navigate(['/login']);
     }
+  }
+
+  isHidden() {
+    const list = ["/", "#", ""];
+    return !(list.indexOf(this.router.url) > -1);
   }
 }

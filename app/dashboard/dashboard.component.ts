@@ -13,11 +13,10 @@ export class DashboardComponent implements OnInit {
     users: User[] = [];
     pets: Pet[] = [];
 
-    constructor(private userService: UserService, private petService: PetService) {
-        this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    }
+    constructor(private userService: UserService, private petService: PetService) { }
 
     ngOnInit() {
+        this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
         this.loadAllUsers();
         this.loadPets();
     }
