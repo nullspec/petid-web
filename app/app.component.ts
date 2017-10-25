@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   isLoggedIn: any;
   loggedInSubscription: Subscription;
   loginText: string = 'Login / Register';
-  copywrite: string = new Date().getFullYear();
+  copywrite: any = new Date().getFullYear();
 
   constructor(
     private authenticationService: AuthenticationService,
@@ -29,7 +29,6 @@ export class AppComponent implements OnInit {
           this.isLoggedIn = loggedIn;
           this.loginText = this.isLoggedIn ? 'Logout' : 'Login / Register';
       });
-    console.log(this.router.url);
   }
 
   ngOnDestroy() {

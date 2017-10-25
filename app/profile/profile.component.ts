@@ -29,10 +29,10 @@ export class ProfileComponent implements OnInit {
       });
   }
 
-  save(): void {
-    this.userService.update(this.user)
-      .then(() => this.goBack());
-  }
+  // save(): void {
+  //   this.userService.update(this.user)
+  //     .then(() => this.goBack());
+  // }
 
   goBack(): void {
     this.location.back();
