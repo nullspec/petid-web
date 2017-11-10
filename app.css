@@ -1,13 +1,14 @@
 ﻿html, body {
-  background: url(/images/dogs-cropped.png) no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/dogs-cropped.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-.login, input {
-  width: 300px;
+.login, .profile, .pet-detail, .dashboard {
+  padding-top: 15px;
+  width: 400px;
   margin-left: auto;
   margin-right: auto;
   color: #fff;
@@ -27,10 +28,12 @@ html {
   position: relative;
   min-height: 100%;
 }
+
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -58,6 +61,6 @@ body > app > .container {
   padding-left: 15px;
 }
 
-code {
-  font-size: 80%;
+#pet_list > a > span {
+  text-shadow: none;
 }

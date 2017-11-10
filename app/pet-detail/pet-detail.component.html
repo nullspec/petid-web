@@ -1,33 +1,37 @@
-<div *ngIf="pet">
-  <h1>{{pet.name}}'s Information</h1>
-  <div>
-    <label>name: </label>
-    <input [(ngModel)]="pet.name" placeholder="name" />
+<div class="inner cover pet-detail">
+  <div *ngIf="pet">
+    <h1 class="text-center">{{pet.name}}'s Profile</h1>
+    <div class="container">
+      <div class="form-group">
+        <label for="detail_name">name: </label>
+        <input id="detail_name" class="form-control" [(ngModel)]="pet.name" placeholder="name" />
+      </div>
+      <div class="form-group">
+        <label for="detail_gender">gender: </label>
+        <input id="detail_gender" class="form-control" [(ngModel)]="pet.gender" placeholder="gender" />
+      </div>
+      <div class="form-group">
+        <label for="detail_breed">breed: </label>
+        <input id="detail_breed" class="form-control" [(ngModel)]="pet.breed" placeholder="breed" />
+      </div>
+      <div class="form-group">
+        <label for="detail_color">color: </label>
+        <input id="detail_color" class="form-control" [(ngModel)]="pet.color" placeholder="color" />
+      </div>
+      <div class="form-group">
+        <label for="detail_birthdate">birthdate: </label>
+        <input id="detail_birthdate" class="form-control" [(ngModel)]="pet.birthdate" placeholder="birthdate" />
+      </div>
+      <div class="form-group">
+        <label for="detail_weight">weight: </label>
+        <input id="detail_weight" class="form-control" [(ngModel)]="pet.weight" placeholder="weight" />
+      </div>
+      <div class="form-group">
+        <label for="detail_image">image: </label>
+        <input id="detail_image" class="form-control" [(ngModel)]="pet.image" placeholder="image" />
+      </div>
+      <button class="btn" (click)="goBack()">Back</button>
+      <button class="btn btn-primary" (click)="save()">Save</button>
+    </div>
   </div>
-  <div>
-    <label>gender: </label>
-    <input [(ngModel)]="pet.gender" placeholder="gender" />
-  </div>
-  <div>
-    <label>breed: </label>
-    <input [(ngModel)]="pet.breed" placeholder="breed" />
-  </div>
-  <div>
-    <label>color: </label>
-    <input [(ngModel)]="pet.color" placeholder="color" />
-  </div>
-  <div>
-    <label>birthdate: </label>
-    <input [(ngModel)]="pet.birthdate" placeholder="birthdate" />
-  </div>
-  <div>
-    <label>weight: </label>
-    <input [(ngModel)]="pet.weight" placeholder="weight" />
-  </div>
-  <div>
-    <label>image: </label>
-    <input [(ngModel)]="pet.image" placeholder="image" />
-  </div>
-  <button (click)="goBack()">Back</button>
-  <button (click)="save()">Save</button>
 </div>

@@ -1,5 +1,5 @@
-<div class="inner cover">
-    <h1>Welcome <a [routerLink]="['/profile', currentUser.id]">{{currentUser.firstName}}</a>!</h1>
+<div class="inner cover dashboard">
+    <h1 class="text-center">Welcome <a [routerLink]="['/profile', currentUser.id]">{{currentUser.firstName}}</a>!</h1>
 <!--     <h3>All registered users:</h3>
     <ul>
         <li *ngFor="let user of users">
@@ -7,12 +7,19 @@
             - <a (click)="deleteUser(user.id)">Delete</a>
         </li>
     </ul> -->
-    <h2>My Pets</h2>
-    <div class="grid grid-pad">
-      <a *ngFor="let pet of pets" [routerLink]="['/pet', pet.id]"  class="col-1-4">
-        <div class="module pet">
-          <h4>{{pet.name}}</h4>
-        </div>
-      </a>
+    <h2 class="text-center">Your Pets</h2>
+    <div class="pb-3"></div>
+    <div id="pet_list" class="list-group align-items-stretch align-items-center">
+        <a *ngFor="let pet of pets" [routerLink]="['/pet', pet.id]" href="#" class="list-group-item">
+            <span>{{pet.name}}</span>
+        </a>
     </div>
+<!--     <ul id="pet_list" class="list-group align-items-stretch">
+        <li class="list-group-item text-center d-inline-block bg-inverse text-white" *ngFor="let pet of pets">
+            <a [routerLink]="['/pet', pet.id]">
+                <div><h5>{{pet.name}}</h5></div>
+            </a>
+        </li>
+   < /ul>
+   -->
 </div>
