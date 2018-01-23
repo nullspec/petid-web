@@ -1,0 +1,22 @@
+<template>
+  <v-layout justify-center align-center class="home">
+    asdf
+  </v-layout>
+</template>
+
+<style scoped>
+  .home {
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)),
+      url(../assets/dogs-cropped.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+</style>
+<script>
+export default {
+  name: 'Home',
+};
+</script>
