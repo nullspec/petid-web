@@ -5,6 +5,7 @@
       v-model="drawer"
       right
       app
+      disable-route-watcher
     >
       <v-list dense>
         <v-list-tile>
@@ -17,10 +18,10 @@
         </v-list-tile>
         <v-list-tile>
           <v-list-tile-action>
-            <v-icon>contact_mail</v-icon>
+            <v-icon>mood</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Contact</v-list-tile-title>
+            <v-list-tile-title>Login</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
@@ -37,9 +38,6 @@
     <v-content>
       <v-container fluid fill-height>
         <router-view />
-<!--         <v-layout justify-center align-center>
-          <router-view />
-        </v-layout> -->
       </v-container>
     </v-content>
 
@@ -63,5 +61,10 @@ export default {
   data: () => ({
     drawer: false,
   }),
+  watch: {
+    drawer() {
+      console.log('drawer');
+    },
+  },
 };
 </script>
