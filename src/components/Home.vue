@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <Toolbar />
     <div class="home-view">
       <div class="home-view-inner">
         <h1>Ensure your pet gets<br> home safely.</h1>
@@ -43,6 +44,9 @@ export default {
     login() {
       this.$router.push({ name: 'Login' });
     },
+  },
+  components: {
+    Toolbar: () => import('@/components/Toolbar'),
   },
 };
 </script>

@@ -11,7 +11,8 @@ module.exports = {
     // Various Dev Server settings
     host: '0.0.0.0', // can be overwritten by process.env.HOST
     port: 8081,
-    google_tracker_id: 'xxxx',
+    api_server: 'http://0.0.0.0:8080/',
+    google_tracker_id: '',
 
     autoOpenBrowser: false,
     errorOverlay: true,

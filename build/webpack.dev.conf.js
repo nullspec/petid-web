@@ -9,7 +9,7 @@ const portfinder = require('portfinder');
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
-    rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true }),
+    rules: utils.styleLoaders({ usePostCSS: true }),
   },
   // cheap-module-eval-source-map is faster for development
   devtool: config.dev.devtool,
@@ -30,25 +30,11 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     } : false,
     publicPath: config.dev.assetsPublicPath,
     proxy: {
-      '/gmi': {
-        target: process.env.GMI_SERVER || config.dev.gmi_server,
+      '/api': {
+        target: process.env.API_SERVER || config.dev.api_server,
         secure: false,
         changeOrigin: true,
-        pathRewrite: { '^/gmi': '' },
-        logLevel: 'debug',
-      },
-      '/uman': {
-        target: process.env.USERMANAGER_SERVER || config.dev.user_server,
-        secure: false,
-        changeOrigin: true,
-        pathRewrite: { '^/uman': '' },
-        logLevel: 'debug',
-      },
-      '/doc': {
-        target: process.env.DOCMANAGER_SERVER || config.dev.document_server,
-        secure: false,
-        changeOrigin: true,
-        pathRewrite: { '^/doc': '' },
+        pathRewrite: { '^/api': '' },
         logLevel: 'debug',
       },
     },
