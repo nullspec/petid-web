@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 
 /* Global state store authentication and things that are global to the app */
-import AppStoreModule from '@/store/AppStoreModule';
+// import AppStoreModule from '@/store/AppStoreModule';
 
 /* Base module for non customized modules */
 // import BaseStoreModule from '@/store/BaseStoreModule';
@@ -19,15 +19,13 @@ import AppStoreModule from '@/store/AppStoreModule';
 // const authentication = new AuthenticationStore();
 // const login = new LoginStore();
 // const timeout = new TimeoutStore();
-const app = new AppStoreModule();
+// const app = new AppStoreModule();
 
 Vue.use(Vuex);
 
 const debug = process.env.NODE_ENV !== 'production';
 
 export default new Vuex.Store({
-  modules: {
-    app,
-  },
+  modules: {},
   strict: debug,
 });

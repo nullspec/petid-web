@@ -1,13 +1,8 @@
 /* eslint-disable import/prefer-default-export */
 
 /* Base */
-export const SET_KEY = 'SET_KEY';
 export const SET_ALL = 'SET_ALL';
-export const SET_LOADED = 'SET_LOADED';
 export const ADD = 'ADD';
-export const DELETE = 'DELETE';
-export const UPDATE_BY_INDEX = 'UPDATE_BY_INDEX';
-export const SET = 'SET';
 
 /* Authentication */
 export const SET_AUTH_TOKEN = 'SET_AUTH_TOKEN';
