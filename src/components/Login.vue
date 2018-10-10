@@ -49,7 +49,6 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex';
 
 export default {
   name: 'Login',
@@ -57,46 +56,9 @@ export default {
     username: '',
     password: '',
   }),
-  computed: {
-    ...mapGetters('authentication', [
-      'isAuthenticated',
-    ]),
-    ...mapGetters('login', [
-      'getFailed',
-    ]),
-  },
   components: {
     Section: () => import('@/components/layout/Section'),
     BaseControlInput: () => import('@/components/base/BaseControlInput'),
-  },
-  methods: {
-    ...mapActions('login', [
-      'logout',
-    ]),
-    async checkCreds() {
-      return false;
-    },
-    resetLogin() {
-      this.logout();
-    },
-  },
-  watch: {
-    isAuthenticated(token) {
-      if (token) {
-        // get user details
-      }
-    },
-    getFailed(fail) {
-      if (fail) {
-        this.setAlertMessage({
-          type: 'error',
-          message: 'Bad Username or Password',
-        });
-      }
-    },
-  },
-  mounted() {
-    this.resetLogin();
   },
 };
 </script>

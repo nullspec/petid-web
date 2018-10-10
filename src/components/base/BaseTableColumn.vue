@@ -2,7 +2,6 @@
 export default {
   name: 'BaseTableColumn',
   props: {
-    format: Function,
     item: Object,
     index: String,
   },
@@ -12,9 +11,6 @@ export default {
     },
   },
   render(createElement) {
-    if (this.$props.format) {
-      return this.$props.format(this.item, this.index, createElement);
-    }
     return createElement('div', this.getText());
   },
 };

@@ -18,4 +18,9 @@ describe('BaseTableHeader.vue', () => {
     cmp.vm.onChange(event);
     expect(cmp.emitted().searchChange).toBeTruthy();
   });
+
+  it('refresh emits', () => {
+    cmp.vm.refresh(event);
+    expect(cmp.emitted().refresh).toBeTruthy();
+  });
 });

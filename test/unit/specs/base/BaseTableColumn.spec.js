@@ -14,7 +14,7 @@ const props = {
     id: '1',
     name: 'Number 1',
   },
-  index: '1',
+  index: 'name',
 };
 
 describe('BaseTableColumn.vue', () => {
@@ -34,5 +34,9 @@ describe('BaseTableColumn.vue', () => {
 
   it('sets the initial index', () => {
     expect(cmp.vm.index).toEqual(props.index);
+  });
+
+  it('getText returns item', () => {
+    expect(cmp.vm.getText()).toEqual('Number 1');
   });
 });

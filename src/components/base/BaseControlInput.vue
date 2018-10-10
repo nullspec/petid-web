@@ -5,8 +5,7 @@
     :required="required"
     :readonly="readonly"
     :type="type"
-    v-model="myValue"
-    @input="updateValue"
+    v-model="input"
     :color="color"
   />
 </template>
@@ -17,7 +16,7 @@
     props: {
       label: String,
       name: String,
-      text: [String, Number],
+      value: [String, Number],
       readonly: Boolean,
       color: {
         type: String,
@@ -32,23 +31,28 @@
         default: false,
       },
     },
-    data: () => ({
-      myValue: '',
-    }),
-    watch: {
-      text(val) {
-        this.myValue = val;
+    computed: {
+      input: {
+        get() {
+          return this.value;
+        },
+        set(val) {
+          this.$emit('input', val);
+        },
       },
     },
-    methods: {
-      updateValue(value) {
-        this.$emit('input', value);
-      },
-    },
-    created() {
-      if (this.text) {
-        this.myValue = this.text;
-      }
-    },
+    // data: () => ({
+    //   myValue: '',
+    // }),
+    // methods: {
+    //   updateValue(value) {
+    //     this.$emit('input', value);
+    //   },
+    // },
+    // created() {
+    //   if (this.text) {
+    //     this.myValue = this.text;
+    //   }
+    // },
   };
 </script>

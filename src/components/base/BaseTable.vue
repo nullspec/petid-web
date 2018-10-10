@@ -13,7 +13,6 @@
           <BaseTableColumn
             :item="props.item"
             :index="header.value"
-            :format="header.format"
           />
         </td>
       </tr>

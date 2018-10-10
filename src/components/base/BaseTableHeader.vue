@@ -31,9 +31,6 @@ export default {
   data: () => ({
     search: '',
   }),
-  components: {
-    BaseButton: () => import('@/components/base/BaseButton'),
-  },
   methods: {
     onChange(event) {
       this.$emit('searchChange', event.currentTarget.value);
