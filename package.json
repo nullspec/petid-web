@@ -1,6 +1,6 @@
 {
   "name": "petid-web",
-  "version": "0.0.1-beta.0",
+  "version": "0.1.0-beta.0",
   "description": "PetId Web",
   "author": "Nick Pate <nicholasrpate@gmail.com>",
   "private": true,
