@@ -24,22 +24,22 @@
 </style>
 
 <script>
-  export default {
-    name: 'BaseButton',
-    props: {
-      color: String,
-      disabled: Boolean,
-      text: String,
-      icon: {
-        type: String,
-        default: '',
-      },
-      loading: false,
+export default {
+  name: 'BaseButton',
+  props: {
+    color: String,
+    disabled: Boolean,
+    text: String,
+    icon: {
+      type: String,
+      default: '',
     },
-    methods: {
-      onClick() {
-        this.$emit('clicked', true);
-      },
+    loading: false,
+  },
+  methods: {
+    onClick() {
+      this.$emit('clicked', true);
     },
-  };
+  },
+};
 </script>

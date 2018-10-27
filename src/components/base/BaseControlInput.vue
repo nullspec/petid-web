@@ -11,48 +11,48 @@
 </template>
 
 <script>
-  export default {
-    name: 'BaseControlInput',
-    props: {
-      label: String,
-      name: String,
-      value: [String, Number],
-      readonly: Boolean,
-      color: {
-        type: String,
-        default: 'accent',
+export default {
+  name: 'BaseControlInput',
+  props: {
+    label: String,
+    name: String,
+    value: [String, Number],
+    readonly: Boolean,
+    color: {
+      type: String,
+      default: 'accent',
+    },
+    type: {
+      type: String,
+      default: 'text',
+    },
+    required: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  computed: {
+    input: {
+      get() {
+        return this.value;
       },
-      type: {
-        type: String,
-        default: 'text',
-      },
-      required: {
-        type: Boolean,
-        default: false,
+      set(val) {
+        this.$emit('input', val);
       },
     },
-    computed: {
-      input: {
-        get() {
-          return this.value;
-        },
-        set(val) {
-          this.$emit('input', val);
-        },
-      },
-    },
-    // data: () => ({
-    //   myValue: '',
-    // }),
-    // methods: {
-    //   updateValue(value) {
-    //     this.$emit('input', value);
-    //   },
-    // },
-    // created() {
-    //   if (this.text) {
-    //     this.myValue = this.text;
-    //   }
-    // },
-  };
+  },
+  // data: () => ({
+  //   myValue: '',
+  // }),
+  // methods: {
+  //   updateValue(value) {
+  //     this.$emit('input', value);
+  //   },
+  // },
+  // created() {
+  //   if (this.text) {
+  //     this.myValue = this.text;
+  //   }
+  // },
+};
 </script>

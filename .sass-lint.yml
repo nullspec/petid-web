@@ -1,7 +1,0 @@
-rules:
-  class-name-format:
-    - 0
-  no-important:
-    - 0
-  nesting-depth:
-    - 3

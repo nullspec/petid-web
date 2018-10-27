@@ -5,7 +5,7 @@
         <v-flex xs12>
           <v-card flat>
             <v-img
-              src="/static/images/Logo.png"
+              src="/images/Logo.png"
               height="315px"
             >
             </v-img>
